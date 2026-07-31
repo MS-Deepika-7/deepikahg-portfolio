@@ -1,0 +1,151 @@
+.projects-section {
+  padding: 80px 8%;
+  background: #f8f9fa;
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.projects-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1b4f72;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.projects-container h2::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background: #f18f01;
+  display: block;
+  margin: 12px auto;
+  border-radius: 10px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 20px;
+}
+
+.project-content h3 {
+  color: #1b4f72;
+  margin-bottom: 12px;
+}
+
+.project-content p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.project-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.tag {
+  background: #f18f01;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: #1b4f72;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #14415d;
+}
+
+.btn-secondary {
+  background: #f18f01;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #d97f00;
+}
+
+/* Dark Mode */
+
+body[data-theme="dark"] .projects-section {
+  background: #121212;
+}
+
+body[data-theme="dark"] .projects-container h2 {
+  color: white;
+}
+
+body[data-theme="dark"] .project-card {
+  background: #1f1f1f;
+}
+
+body[data-theme="dark"] .project-content h3 {
+  color: white;
+}
+
+body[data-theme="dark"] .project-content p {
+  color: #dcdcdc;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 60px 5%;
+  }
+
+  .projects-container h2 {
+    font-size: 2rem;
+  }
+
+  .project-image {
+    height: 200px;
+  }
+}

@@ -1,0 +1,147 @@
+.contact-section {
+  padding: 80px 8%;
+  background: #ffffff;
+}
+
+.contact-container {
+  max-width: 700px;
+  margin: auto;
+}
+
+.contact-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1b4f72;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.contact-container h2::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background: #f18f01;
+  display: block;
+  margin: 12px auto;
+  border-radius: 10px;
+}
+
+.contact-subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+.contact-form {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: #1b4f72;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #1b4f72;
+  box-shadow: 0 0 0 3px rgba(27, 79, 114, 0.15);
+}
+
+.contact-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #1b4f72;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  background: #14415d;
+}
+
+.status-message {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 600;
+  color: green;
+}
+
+/* Dark Mode */
+
+body[data-theme="dark"] .contact-section {
+  background: #121212;
+}
+
+body[data-theme="dark"] .contact-container h2 {
+  color: white;
+}
+
+body[data-theme="dark"] .contact-subtitle {
+  color: #dcdcdc;
+}
+
+body[data-theme="dark"] .contact-form {
+  background: #1f1f1f;
+}
+
+body[data-theme="dark"] .form-group label {
+  color: white;
+}
+
+body[data-theme="dark"] .form-group input,
+body[data-theme="dark"] .form-group textarea {
+  background: #2a2a2a;
+  color: white;
+  border: 1px solid #444;
+}
+
+body[data-theme="dark"] .contact-btn {
+  background: #f18f01;
+}
+
+body[data-theme="dark"] .contact-btn:hover {
+  background: #d97f00;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 60px 5%;
+  }
+
+  .contact-container h2 {
+    font-size: 2rem;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+}
