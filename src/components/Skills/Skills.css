@@ -3,12 +3,7 @@
   background: #ffffff;
 }
 
-.skills-container {
-  max-width: 1000px;
-  margin: auto;
-}
-
-.skills-container h2 {
+.skills-section h2 {
   text-align: center;
   font-size: 2.5rem;
   color: #1b4f72;
@@ -16,56 +11,56 @@
   position: relative;
 }
 
-.skills-container h2::after {
+.skills-section h2::after {
   content: "";
   width: 70px;
   height: 4px;
   background: #f18f01;
   display: block;
-  margin: 12px auto;
-  border-radius: 10px;
+  margin: 10px auto;
+  border-radius: 5px;
 }
 
 .skills-grid {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
 }
 
 .skill-card {
-  background: #f8f9fa;
-  padding: 20px;
+  background: #f4f6f8;
+  padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
 }
 
-.skill-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 12px;
-  font-weight: 600;
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.skill-card h3 {
+  margin-bottom: 15px;
   color: #1b4f72;
 }
 
 .progress-bar {
   width: 100%;
-  height: 12px;
-  background: #dfe6e9;
+  height: 24px;
+  background: #ddd;
   border-radius: 20px;
   overflow: hidden;
 }
 
-.progress {
+.progress-fill {
   height: 100%;
-  background: linear-gradient(to right, #1b4f72, #f18f01);
+  background: linear-gradient(90deg, #1b4f72, #386dbb);
+  color: white;
+  text-align: center;
+  line-height: 24px;
+  font-size: 0.9rem;
+  font-weight: bold;
   border-radius: 20px;
-  transition: width 1s ease-in-out;
-}
-
-/* Hover Effect */
-
-.skill-card:hover {
-  transform: translateY(-5px);
-  transition: 0.3s ease;
 }
 
 /* Dark Mode */
@@ -74,30 +69,30 @@ body[data-theme="dark"] .skills-section {
   background: #121212;
 }
 
-body[data-theme="dark"] .skills-container h2 {
-  color: white;
-}
-
 body[data-theme="dark"] .skill-card {
-  background: #1f1f1f;
+  background: #242424;
 }
 
-body[data-theme="dark"] .skill-header {
-  color: white;
+body[data-theme="dark"] .skill-card h3 {
+  color: #ffffff;
 }
 
 body[data-theme="dark"] .progress-bar {
-  background: #333;
+  background: #444;
+}
+
+body[data-theme="dark"] .skills-section h2 {
+  color: #ffffff;
 }
 
 /* Mobile */
 
 @media (max-width: 768px) {
-  .skills-section {
-    padding: 60px 5%;
+  .skills-section h2 {
+    font-size: 2rem;
   }
 
-  .skills-container h2 {
-    font-size: 2rem;
+  .skill-card {
+    padding: 20px;
   }
 }

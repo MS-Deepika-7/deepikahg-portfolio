@@ -1,109 +1,70 @@
 .about-section {
   padding: 80px 8%;
-  background: #f8f9fa;
+  background: #f4f6f8;
 }
 
-.about-container {
-  max-width: 1000px;
-  margin: auto;
+.about-section h2 {
   text-align: center;
-}
-
-.about-container h2 {
   font-size: 2.5rem;
   color: #1b4f72;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   position: relative;
 }
 
-.about-container h2::after {
+.about-section h2::after {
   content: "";
   width: 70px;
   height: 4px;
   background: #f18f01;
   display: block;
-  margin: 12px auto;
-  border-radius: 10px;
+  margin: 10px auto;
+  border-radius: 5px;
 }
 
-.about-text {
+
+
+.about-content {
+  text-align: center;
+ 
+}
+
+.about-content p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #444;
-  margin-bottom: 20px;
-}
-
-.highlight {
-  color: #f18f01;
-  font-weight: bold;
-}
-
-.about-details {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  margin-top: 40px;
-  gap: 25px;
-}
-
-.detail-card {
-  background: white;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-  transition: 0.3s;
-}
-
-.detail-card:hover {
-  transform: translateY(-8px);
-}
-
-.detail-card h3 {
-  color: #1b4f72;
-  margin-bottom: 10px;
-}
-
-.detail-card p {
-  color: #555;
+  margin-bottom: 18px;
+  color: #2c3e50;
 }
 
 /* Dark Mode */
-
 body[data-theme="dark"] .about-section {
   background: #121212;
 }
 
-body[data-theme="dark"] .about-container h2 {
-  color: white;
+body[data-theme="dark"] .about-section h2,
+body[data-theme="dark"] .about-image h3 {
+  color: #ffffff;
 }
 
-body[data-theme="dark"] .about-text {
-  color: #dddddd;
+body[data-theme="dark"] .about-content p {
+  color: #d1d5db;
 }
 
-body[data-theme="dark"] .detail-card {
-  background: #1f1f1f;
-}
-
-body[data-theme="dark"] .detail-card h3 {
-  color: #f18f01;
-}
-
-body[data-theme="dark"] .detail-card p {
-  color: #eeeeee;
+body[data-theme="dark"] .about-image img {
+  border-color: #f18f01;
 }
 
 /* Mobile */
-
 @media (max-width: 768px) {
-  .about-section {
-    padding: 60px 5%;
+  .about-container {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .about-container h2 {
+  .about-content {
+    max-width: 100%;
+  }
+
+  .about-section h2 {
     font-size: 2rem;
-  }
-
-  .about-text {
-    font-size: 1rem;
   }
 }

@@ -1,22 +1,24 @@
-import { useState } from 'react' 
-import Navbar from './components/Navbar/Navbar'
-import Hero from './components/Hero/Hero'
-import About from './components/About/About'
-import Skills from './components/Skills/Skills'
-import Projects from './components/Projects/Projects'
-import Contact from './components/Contact/Contact'
-
+import { useState } from 'react'
+import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Hero/Hero";
+import About from "./components/About/About";
+import Skills from "./components/Skills/Skills";
+import Contact from "./components/Contact/Contact";
+import Projects from "./components/Projects/Projects";
+import Footer from "./components/Footer/Footer";
+ 
 function App() {
   const [count, setCount] = useState(0)
  
   return (
     <>
-        <Navbar /> 
-        <Hero /> 
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+     <Navbar />
+     <Hero />
+     <About />
+     <Skills />
+     <Projects />
+     <Contact />
+     <Footer />
     </>
   )
 }

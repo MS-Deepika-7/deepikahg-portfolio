@@ -1,47 +1,55 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Navbar.css";
 
-function Navbar({ theme, setTheme }) {
+function Navbar() {
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") || "light"
+  );
+
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <header className="site-header">
       <nav className="navbar">
-        
-        {/* Logo */}
-        <div className="logo">
-          DH
-        </div>
+        <div className="logo">DH</div>
 
-        {/* Navigation Links */}
         <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+        
+       
 
-        {/* Right Side Buttons */}
-        <div className="nav-actions">
-          <button
-            className="theme-toggle"
-            onClick={toggleTheme}
-          >
-            {theme === "light" ? "🌙" : "☀️"}
-          </button>
+        <button
+          className="theme-toggle"
+          onClick={toggleTheme}
+          aria-label="Toggle Theme"
+        >
+          {theme === "dark" ? "🌙" : "☀️"}
+        </button>
 
-          <button
-            className="menu-toggle"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            ☰
-          </button>
-        </div>
-
+        <button
+          className="menu-toggle"
+          onClick={toggleMenu}
+          aria-label="Toggle Menu"
+        >
+          ☰
+        </button>
       </nav>
     </header>
   );

@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import "./Hero.css";
 
 function Hero() {
@@ -9,23 +8,28 @@ function Hero() {
     if (hour < 17) return "Good Afternoon";
     return "Good Evening";
   };
+  const heroTitle =document.querySelector(`.hero-section h1`);
+if(heroTitle){
+    heroTitle.textContent =`${getGreeting()}, Welcome to my portfolio`;
+}
 
   return (
     <section id="hero" className="hero-section">
-      <div className="hero-content">
-
+      <div className="hero-container">
         <div className="hero-image">
           <img src="/myphoto.jpeg" alt="Deepika H G" />
         </div>
 
-        <div className="hero-text">
-          <h1>{getGreeting()}, I'm Deepika H G</h1>
+        <div className="hero-content">
+          <h1>{getGreeting()}, Welcome to My Portfolio</h1>
 
-          <h2>Aspiring AI & ML Student</h2>
+          <h2>
+            I'm <span className="highlight">Deepika H G</span>
+          </h2>
 
           <p>
-            Passionate about Web Development, Artificial Intelligence
-            and creating modern, responsive websites.
+            B.Tech AIML Student /  Web
+            Developer/ Passionate Tech enthusiast
           </p>
 
           <div className="hero-buttons">
@@ -38,7 +42,6 @@ function Hero() {
             </a>
           </div>
         </div>
-
       </div>
     </section>
   );
