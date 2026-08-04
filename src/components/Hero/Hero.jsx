@@ -31,7 +31,6 @@ if(heroTitle){
             B.Tech AIML Student /  Web
             Developer/ Passionate Tech enthusiast
           </p>
-
           <div className="hero-buttons">
             <a href="#projects" className="btn btn-primary">
               View My Work
